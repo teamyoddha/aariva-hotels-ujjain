@@ -78,7 +78,7 @@ export function ContactForm() {
 
     if (!ENDPOINT) {
       const msg = [
-        "Hello Shivkunj, I would like to make a booking enquiry.",
+        "Hello Aariva, I would like to make a booking enquiry.",
         `Name: ${values.name}`,
         `Phone: ${values.phone}`,
         values.email && `Email: ${values.email}`,
@@ -103,7 +103,7 @@ export function ContactForm() {
       const res = await fetch(ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ ...values, room: roomName, source: "shivkunj-website" }),
+        body: JSON.stringify({ ...values, room: roomName, source: "aariva-website" }),
       });
       if (!res.ok) throw new Error(String(res.status));
       setVia("email");
@@ -211,7 +211,7 @@ export function ContactForm() {
             {...fieldProps("message")}
             rows={4}
             className="field-input py-3"
-            placeholder="Arrival time, travelling with elders, pickup help…"
+            placeholder="Arrival time, guest arrangements or questions about your stay…"
           />
         </div>
         {/* Honeypot: hidden from people and assistive tech */}
@@ -241,7 +241,7 @@ export function ContactForm() {
         {status === "success" && via === "whatsapp" && (
           <p className="flex items-start gap-2 rounded-xs bg-[#EAF4EC] px-4 py-3 text-md text-[#1F4D2C]">
             <CheckCircle2 aria-hidden size={18} className="mt-1 shrink-0" />
-            Your enquiry is ready in WhatsApp. Tap Send there and the Shivkunj team will reply with availability and rates.
+            Your enquiry is ready in WhatsApp. Tap Send there and the Aariva team will reply with availability and rates.
           </p>
         )}
         {status === "success" && via === "email" && (

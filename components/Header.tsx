@@ -42,11 +42,11 @@ export function Header() {
         )}
       >
         <div className="container-wide flex h-full items-center justify-between gap-6">
-          <Link href="/" className="-ml-1 shrink-0 rounded-xs p-1" aria-label="Shivkunj home">
+          <Link href="/" className="-ml-1 shrink-0 rounded-xs p-1" aria-label="Aariva home">
             <Logo variant={transparent ? "ivory" : "maroon"} className="h-[46px] w-auto md:h-[52px]" />
           </Link>
 
-          <nav aria-label="Main" className="hidden md:block">
+          <nav aria-label="Main" className="hidden lg:block">
             <ul className="flex items-center gap-1">
               {nav.map((item) => {
                 const active = isActive(item.href);
@@ -77,7 +77,7 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link href="/contact/#enquiry" className={cn("hidden md:inline-flex", transparent ? "btn-light" : "btn-primary")}>
+            <Link href="/contact/#enquiry" className={cn("hidden lg:inline-flex", transparent ? "btn-light" : "btn-primary")}>
               Book Your Stay
             </Link>
             <MobileNavigation light={transparent} />

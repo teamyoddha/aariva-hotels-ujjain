@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   const post = getPost((await params).slug);
   if (!post) return {};
   return buildMetadata({
-    title: post.seoTitle || `${post.title} | Shivkunj`,
+    title: post.seoTitle || `${post.title} | Aariva`,
     description: post.seoDescription || post.excerpt,
     path: `/blog/${post.slug}/`,
     image: post.featuredImage,

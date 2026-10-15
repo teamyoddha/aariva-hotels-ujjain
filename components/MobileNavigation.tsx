@@ -19,7 +19,7 @@ export function MobileNavigation({ light }: { light: boolean }) {
   useEffect(() => setOpen(false), [pathname]);
 
   return (
-    <div className="md:hidden">
+    <div className="lg:hidden">
       <button
         type="button"
         onClick={() => setOpen(true)}
@@ -96,7 +96,7 @@ export function MobileNavigation({ light }: { light: boolean }) {
             <Phone aria-hidden size={18} className="text-gold-text" /> {hotel.phone}
           </a>
           <a href={whatsappLink()} target="_blank" rel="noopener" className="flex min-h-[44px] items-center gap-3 text-ink">
-            <MessageCircle aria-hidden size={18} className="text-gold-text" /> WhatsApp Shivkunj
+            <MessageCircle aria-hidden size={18} className="text-gold-text" /> WhatsApp Aariva
           </a>
         </div>
       </div>

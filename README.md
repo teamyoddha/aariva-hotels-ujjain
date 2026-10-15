@@ -1,75 +1,19 @@
-# Shivkunj, Ujjain — Website
+# Aariva Hotels & Banquets
 
-Next.js 15 (App Router) · TypeScript · Tailwind CSS 3 · MDX blog · static export.
-Design follows `Shivkunj_website_design_guide.md`. Tokens are in `app/globals.css` and `tailwind.config.ts`.
+React 19 / Next.js 15 / TypeScript / Tailwind. Adapted from the supplied hotel website using Aariva's logo and photographs.
 
-## Commands
+- `npm install` installs dependencies on a new machine.
+- `npm run dev` starts the preview at http://localhost:3200.
+- `npm run typecheck` checks TypeScript.
+- `npm run build` produces the static website in `out/`.
+- Upload the contents of `out/` to static hosting when ready to publish.
 
-| Command | What it does |
-|---|---|
-| `npm run dev` | Dev server on http://localhost:3200 |
-| `npm run build` | Static site in `out/`. Upload its contents to the hosting root (`.htaccess` included). |
-| `npm run images` | Re-generate responsive WebP files from `assets/source/` |
-| `npm run typecheck` | TypeScript check |
+Pages: Home, About, Rooms, Deluxe Room, Family Room, Banquets, Gallery, Explore Ujjain, Contact and three information/policy pages.
 
-## Where content lives
+Content lives in `data/`. Photographs are in `public/images/Aariva`; responsive WebP assets are in `public/images`. The active logo is `public/aariva-logo.png`.
 
-| To change… | Edit |
-|---|---|
-| Phone, WhatsApp, email, address, map, check-in times, rating/offer switches | `data/hotel.ts` |
-| Rooms (add a room = add an entry) | `data/rooms.ts` |
-| Amenities | `data/amenities.ts` |
-| Explore Ujjain cards, nearby distances | `data/destinations.ts` |
-| Guest reviews (genuine only) | `data/testimonials.ts` |
-| Gallery | `data/gallery.ts` |
-| Blog categories | `data/blog.ts` |
-| Blog posts | `content/blog/*.mdx` |
+Enquiries open WhatsApp for +91 84588 84599 with guest details ready to send. They are not instant reservations and do not process payments. No email delivery endpoint is configured.
 
-Unverified facts appear as visible `[ADD …]` markers. See **VERIFICATION.md**.
+Old reference-hotel blog articles are retained as unpublished drafts pending an editorial review. Ratings and reviews are hidden until verified Aariva reviews are supplied.
 
-## Adding a blog post
-
-Create `content/blog/my-post.mdx`:
-
-```mdx
----
-title: "Post title"
-slug: "my-post"                 # optional, defaults to file name
-excerpt: "One or two sentences for cards and meta description."
-category: "Temples"             # must match a name in data/blog.ts
-publishedAt: "2026-11-01"
-updatedAt: ""                   # optional
-featuredImage: "/images/ram-ghat.webp"
-featuredImageAlt: "Describe the image"
-author: "Shivkunj"
-seoTitle: ""                    # optional
-seoDescription: ""              # optional
-draft: false                    # true = hidden
----
-
-Write in Markdown. `## Headings` build the table of contents.
-Components: <Tip>, <Note>, <Verify>…</Verify>, <InfoGrid items={[["Label","Value"]]} />, <StayCTA />
-```
-
-Rebuild, and the post appears in the listing, its category page, the homepage
-"latest posts", related posts, the sitemap, metadata and Article schema.
-
-To move to a CMS later, replace the source adapter in `lib/blog.ts`. Components only use its `BlogPost` type.
-
-## Images
-
-Put originals in `assets/source/`, run `npm run images`, then reference them as
-`/images/<name>.webp`. A custom `next/image` loader (`lib/image-loader.ts`) serves
-the right width (320–1920) for each screen.
-
-## Enquiries
-
-No booking engine exists, so the site never shows live availability. The booking bar
-and contact form open WhatsApp with the guest's details pre-filled. Set
-`NEXT_PUBLIC_ENQUIRY_ENDPOINT` at build time to POST the form as JSON to Formspree,
-Web3Forms or your own API instead.
-
-## Redirects
-
-`public/.htaccess` 301-redirects the old WordPress URLs (`/about-us/`, `/contact-us/`,
-`/blog-news/`, the two existing posts, and the policy pages) to the new routes.
+See VERIFICATION.md for the remaining content confirmations. This project is not automatically deployed.

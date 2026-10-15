@@ -30,8 +30,8 @@ export function buildMetadata({
   title,
   description,
   path,
-  image = "/og-default.jpg",
-  imageAlt = "Shivkunj, Ujjain",
+  image = "/images/aariva-deluxe.webp",
+  imageAlt = "Aariva, Ujjain",
   type = "website",
   publishedTime,
   modifiedTime,
@@ -77,8 +77,8 @@ export function hotelSchema() {
     alternateName: hotel.name,
     slogan: hotel.tagline,
     url: SITE_URL,
-    logo: absoluteUrl("/logo-maroon.png"),
-    image: [absoluteUrl("/images/exterior-dusk-1280.webp"), absoluteUrl("/images/room-wide-warm-1280.webp")],
+    logo: absoluteUrl("/aariva-logo.png"),
+    image: [absoluteUrl("/images/aariva-reception-1-1280.webp"), absoluteUrl("/images/aariva-deluxe-1280.webp")],
     telephone: hotel.phone,
     email: hotel.email,
     address: {
@@ -90,7 +90,7 @@ export function hotelSchema() {
       addressCountry: hotel.country,
     },
     hasMap: hotel.googleMapsUrl,
-    amenityFeature: amenities.map((a) => ({ "@type": "LocationFeatureSpecification", name: a.label, value: true })),
+    amenityFeature: amenities.filter(a => a.id !== 'parking').map((a) => ({ "@type": "LocationFeatureSpecification", name: a.label, value: true })),
   };
   const prices = rooms.map((r) => r.startingPrice).filter((p): p is number => typeof p === "number");
   if (prices.length) schema.priceRange = `From ₹${Math.min(...prices).toLocaleString("en-IN")} per night`;
@@ -143,7 +143,7 @@ export function articleSchema(post: BlogPost) {
     publisher: {
       "@type": "Organization",
       name: hotel.legalName,
-      logo: { "@type": "ImageObject", url: absoluteUrl("/logo-maroon.png") },
+      logo: { "@type": "ImageObject", url: absoluteUrl("/aariva-logo.png") },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     articleSection: post.category,

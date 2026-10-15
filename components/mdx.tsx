@@ -84,8 +84,7 @@ function StayCTA() {
         Looking for a comfortable place to stay during your Ujjain visit?
       </p>
       <p className="mt-2 text-[16px] leading-[27px] text-cream/85">
-        Shivkunj is a family-managed hotel on the Indore–Ujjain Road with air-conditioned rooms, free parking and a 24×7
-        reception.
+        Aariva welcomes you to Nanakheda, near Birla Hospital Choraha, with Family and Deluxe rooms, air conditioning and free Wi-Fi.
       </p>
       <div className="mt-6 flex flex-col gap-3 sm:flex-row">
         <Link href="/rooms/" className="btn-light no-underline">

@@ -27,7 +27,7 @@ export function RoomFacts({ room, className }: { room: Room; className?: string 
 export function RoomPrice({ room, inverse }: { room: Room; inverse?: boolean }) {
   return (
     <p className={inverse ? "text-cream/80" : "text-ink-muted"}>
-      <span className="text-sm">From </span>
+      {room.startingPrice && <span className="text-sm">From </span>}
       {room.startingPrice ? (
         <>
           <span className={["text-2xl font-semibold", inverse ? "text-gold" : "text-gold-text"].join(" ")}>
@@ -36,7 +36,7 @@ export function RoomPrice({ room, inverse }: { room: Room; inverse?: boolean }) 
           <span className="text-sm"> / night</span>
         </>
       ) : (
-        <Pending>ADD CURRENT STARTING PRICE</Pending>
+        <span className="font-medium">Contact us for current rates</span>
       )}
     </p>
   );

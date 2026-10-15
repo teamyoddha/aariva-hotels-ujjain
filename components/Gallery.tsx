@@ -14,11 +14,14 @@ const tile = {
 
 export function Gallery({ images }: { images: GalleryImage[] }) {
   const [index, setIndex] = useState<number | null>(null);
+  const [category, setCategory] = useState('All');
+  const categories = ['All', ...new Set(images.map(image => image.category))];
   return (
     <>
+      <div className="mb-8 flex flex-wrap gap-3" aria-label="Filter gallery">{categories.map(item => <button key={item} type="button" aria-pressed={category===item} onClick={()=>setCategory(item)} className={category===item?'btn-primary btn-sm':'btn-secondary btn-sm'}>{item}</button>)}</div>
       <ul className="grid grid-flow-dense auto-rows-[150px] grid-cols-2 gap-3 sm:auto-rows-[200px] sm:gap-4 md:auto-rows-[230px] md:grid-cols-4">
         {images.map((img, i) => (
-          <li key={img.src} className={tile[img.tile]}>
+          <li key={img.src} className={tile[img.tile]} hidden={category!=='All' && category!==img.category}>
             <button
               type="button"
               onClick={() => setIndex(i)}
@@ -40,7 +43,7 @@ export function Gallery({ images }: { images: GalleryImage[] }) {
           </li>
         ))}
       </ul>
-      <Lightbox images={images} index={index} onChange={setIndex} label="Shivkunj photo gallery" />
+      <Lightbox images={images} index={index} onChange={setIndex} label="Aariva photo gallery" />
     </>
   );
 }

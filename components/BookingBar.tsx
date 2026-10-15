@@ -11,7 +11,7 @@ function today() {
 }
 
 /**
- * Availability enquiry. Shivkunj has no live booking engine, so this does NOT show
+ * Availability enquiry. Aariva has no live booking engine, so this does NOT show
  * live inventory: it sends the guest's dates to the hotel on WhatsApp (guide §11).
  */
 export function BookingBar({ className }: { className?: string }) {
@@ -31,7 +31,7 @@ export function BookingBar({ className }: { className?: string }) {
     if (checkOut <= checkIn) return setError("Check-out must be after check-in.");
     setError("");
     const msg = [
-      "Hello Shivkunj, I would like to check room availability.",
+      "Hello Aariva, I would like to check room availability.",
       `Check-in: ${checkIn}`,
       `Check-out: ${checkOut}`,
       `Guests: ${guests}`,

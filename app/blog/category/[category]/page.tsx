@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
   if (!cat) return {};
   const empty = getPostsByCategory(cat.slug).length === 0;
   return buildMetadata({
-    title: `${cat.name} | Shivkunj Ujjain Travel Guide`,
-    description: `${cat.description} Articles from the Shivkunj Ujjain travel guide.`,
+    title: `${cat.name} | Aariva Ujjain Travel Guide`,
+    description: `${cat.description} Articles from the Aariva Ujjain travel guide.`,
     path: `/blog/category/${cat.slug}/`,
     // Empty category pages exist so links never 404, but should not be indexed
     noindex: empty,
@@ -37,7 +37,7 @@ export default async function CategoryPage({ params }: { params: Promise<Params>
   return (
     <>
       <PageHero
-        eyebrow="Shivkunj Travel Guide"
+        eyebrow="Aariva Travel Guide"
         title={cat.name}
         crumbs={[
           { name: "Blog", path: "/blog/" },

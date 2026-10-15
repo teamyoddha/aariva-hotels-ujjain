@@ -7,7 +7,7 @@ import { getAllPosts } from "@/lib/blog";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Ujjain Travel Guide & Temple Tips | Shivkunj Blog",
+  title: "Ujjain Travel Guide & Temple Tips | Aariva Blog",
   description:
     "Practical travel information, temple guides and local suggestions to help you plan your stay in Ujjain, from Mahakaleshwar darshan to family itineraries.",
   path: "/blog/",
@@ -19,7 +19,7 @@ export default function BlogPage() {
   return (
     <>
       <PageHero
-        eyebrow="Shivkunj Travel Guide"
+        eyebrow="Aariva Travel Guide"
         title="Helpful Guides for Exploring Ujjain"
         crumbs={[{ name: "Blog", path: "/blog/" }]}
         intro={<p>Practical travel information, temple guides and local suggestions to help you plan your stay in Ujjain.</p>}
@@ -36,7 +36,7 @@ export default function BlogPage() {
       <BookingCTA
         eyebrow="Stay With Us"
         title="Planning Your Ujjain Trip?"
-        text="Shivkunj is a comfortable, family-managed base on the Indore–Ujjain Road. Ask us about rooms and local travel."
+        text="Aariva is a comfortable, welcoming base on the Nanakheda, near Birla Hospital Choraha. Ask us about rooms and local travel."
         primary={{ label: "Explore Rooms", href: "/rooms/" }}
       />
     </>

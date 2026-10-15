@@ -12,7 +12,7 @@ export function BlogPreview() {
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <SectionHeading
             id="blog-preview-title"
-            eyebrow="Shivkunj Travel Guide"
+            eyebrow="Aariva Travel Guide"
             title="Plan Your Ujjain Visit"
             intro="Practical guides written for families and pilgrims, from darshan tips to simple itineraries."
           />

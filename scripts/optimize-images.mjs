@@ -1,55 +1,14 @@
-// Converts originals in assets/source into responsive WebP variants in public/images.
-// Run `npm run images` after adding or replacing a photo. The custom image loader
-// (lib/image-loader.ts) requests `/images/<name>-<width>.webp` for these widths.
-import sharp from "sharp";
-import fs from "node:fs";
-import path from "node:path";
-
-const SRC = "assets/source";
-const OUT = "public/images";
-const WIDTHS = [320, 640, 960, 1280, 1920];
-const SKIP = new Set(["logo.png", "logo-mark.png"]);
-// Sources that arrive with a white frame baked in
-const TRIM = new Set(["mahakal-night.jpg", "exterior-dusk.jpg"]);
-
-fs.mkdirSync(OUT, { recursive: true });
-
-for (const file of fs.readdirSync(SRC)) {
-  if (SKIP.has(file) || !/\.(png|jpe?g|webp)$/i.test(file)) continue;
-  const name = path.parse(file).name;
-  for (const w of WIDTHS) {
-    let img = sharp(path.join(SRC, file)).rotate();
-    if (TRIM.has(file)) {
-      const { data, info } = await img.trim({ background: "#ffffff", threshold: 40 }).toBuffer({ resolveWithObject: true });
-      img = sharp(data).extract({ left: 4, top: 4, width: info.width - 8, height: info.height - 8 });
-    }
-    await img
-      .resize({ width: w, withoutEnlargement: true })
-      .webp({ quality: 74 })
-      .toFile(path.join(OUT, `${name}-${w}.webp`));
-  }
-  console.log("✓", name);
+import sharp from 'sharp';
+import path from 'node:path';
+const root='public';
+const names={'Deluxe Room.jpg':'aariva-deluxe','Deluxe Room1.jpg':'aariva-deluxe-1','Deluxe Room2.jpg':'aariva-deluxe-2','Family Room.jpg':'aariva-family','Family Room (2).jpg':'aariva-family-2','reception1.jpg':'aariva-reception-1','reception2.jpg':'aariva-reception-2','bathrooms.jpg':'aariva-bathroom','bathrooms1.jpg':'aariva-bathroom-1'};
+for(const[file,name] of Object.entries(names)){
+ const src=path.join(root,'images/Aariva',file);
+ for(const width of [320,640,960,1280,1920]) await sharp(src).rotate().resize({width,withoutEnlargement:true}).webp({quality:82}).toFile(path.join(root,'images',`${name}-${width}.webp`));
+ await sharp(src).rotate().resize({width:1280,withoutEnlargement:true}).webp({quality:82}).toFile(path.join(root,'images',`${name}.webp`));
 }
-
-// Brand assets: the supplied logo is cream on transparent; derive a maroon version
-// for light backgrounds.
-const logo = path.join(SRC, "logo.png");
-await sharp(logo).toFile(path.join("public", "logo-ivory.png"));
-const { width, height } = await sharp(logo).metadata();
-const alpha = await sharp(logo).extractChannel("alpha").toBuffer();
-await sharp({ create: { width, height, channels: 3, background: "#6E1F2B" } })
-  .joinChannel(alpha)
-  .png()
-  .toFile(path.join("public", "logo-maroon.png"));
-
-const mark = path.join(SRC, "logo-mark.png");
-await sharp(mark).resize(512).png().toFile("app/icon.png");
-await sharp(mark).resize(180).flatten({ background: "#FBF6EE" }).png().toFile("app/apple-icon.png");
-
-// Default Open Graph image
-await sharp(path.join(SRC, "room-wide-warm.png"))
-  .resize(1200, 630, { fit: "cover" })
-  .jpeg({ quality: 80 })
-  .toFile(path.join("public", "og-default.jpg"));
-
-console.log("Brand assets written.");
+const logo=path.join(root,'aariva logo withoutbackound.png');
+await sharp(logo).trim().resize({width:320,height:320,fit:'inside'}).png().toFile(path.join(root,'aariva-logo.png'));
+await sharp(logo).trim().resize(512,512,{fit:'contain',background:'#fbf6ee'}).png().toFile('app/icon.png');
+await sharp(logo).trim().resize(180,180,{fit:'contain',background:'#fbf6ee'}).png().toFile('app/apple-icon.png');
+console.log('Aariva responsive photos, logo and app icons prepared.');

@@ -7,26 +7,26 @@ import { hotel, fullAddress, telLink, mailLink, whatsappLink } from "@/data/hote
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Contact Shivkunj Ujjain | Room Availability & Booking Help",
-  description: `Contact Shivkunj, Ujjain for room availability and booking help. Call ${hotel.phone}, WhatsApp us, or send an enquiry. Located on the Indore–Ujjain Road.`,
+  title: "Contact Aariva Ujjain | Room Availability & Booking Help",
+  description: `Contact Aariva, Ujjain for room availability and booking help. Call ${hotel.phone}, WhatsApp us, or send an enquiry. Located on the Nanakheda, near Birla Hospital Choraha.`,
   path: "/contact/",
-  image: "/images/entrance-night.webp",
+  image: "/images/aariva-reception-2.webp",
 });
 
 export default function ContactPage() {
   const channels = [
     { icon: Phone, label: "Phone", value: hotel.phone, href: telLink, note: "Call for availability and booking" },
-    { icon: MessageCircle, label: "WhatsApp", value: "WhatsApp Shivkunj", href: whatsappLink(), note: "Quick replies to booking questions", external: true },
+    { icon: MessageCircle, label: "WhatsApp", value: "WhatsApp Aariva", href: whatsappLink(), note: "Quick replies to booking questions", external: true },
     { icon: Mail, label: "Email", value: hotel.email, href: mailLink, note: "For group stays and invoices" },
   ];
 
   return (
     <>
       <PageHero
-        eyebrow="Contact Shivkunj"
+        eyebrow="Contact Aariva"
         title="We're Here to Help Plan Your Stay."
         crumbs={[{ name: "Contact", path: "/contact/" }]}
-        intro={<p>Contact the Shivkunj team for room availability, booking assistance or questions about your stay in Ujjain.</p>}
+        intro={<p>Contact the Aariva team for room availability, booking assistance or questions about your stay in Ujjain.</p>}
       />
 
       <section className="section pt-12 md:pt-16">
@@ -70,7 +70,7 @@ export default function ContactPage() {
                 </span>
                 <span>
                   <span className="block text-xs font-semibold uppercase tracking-[1.5px] text-gold-text">Reception</span>
-                  <span className="mt-0.5 block text-md text-ink">Open 24×7, including late-night and early-morning arrivals</span>
+                  <span className="mt-0.5 block text-md text-ink">24/7 guest support. Please confirm arrival arrangements when booking.</span>
                 </span>
               </li>
             </ul>
@@ -93,7 +93,7 @@ export default function ContactPage() {
         <div className="container-wide">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <h2 id="map-title" className="text-[30px] font-medium leading-[38px]">
-              Find Shivkunj
+              Find Aariva
             </h2>
             <a href={hotel.googleMapsUrl} target="_blank" rel="noopener" className="btn-primary self-start">
               <Navigation aria-hidden size={18} /> Get Directions

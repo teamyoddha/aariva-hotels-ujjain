@@ -1,56 +1,13 @@
-# Shivkunj — Information to Verify Before Launch
+# Aariva content confirmations
 
-The site never invents facts. Anything unconfirmed shows on the page as a dashed
-gold marker like `[ADD CURRENT STARTING PRICE]`. To find every one in code:
+Implemented from the supplied Aariva details: Nanakheda address, phone/WhatsApp, email, Family Room (4 guests, 2 double beds), Deluxe Room (2 guests, king bed), Wi-Fi, AC, guest support and banquet enquiries.
 
-```bash
-grep -rn "Pending\|Verify>" app components content
-```
+Before publishing final operational details, confirm:
+- Room rates, taxes, child and extra-bed arrangements.
+- Check-in/out times and cancellation/refund terms.
+- Room-service hours and parking availability.
+- Banquet capacity, packages, catering and photographs.
+- Exact map pin, attraction distances and any social accounts.
+- Privacy information and internal handling of guest enquiries.
 
-## 1. Taken from the current hotel-shivkunj.com — confirm still correct
-
-| Item | Current value | Where to change |
-|---|---|---|
-| Phone | +91 78284 33133 | `data/hotel.ts` |
-| WhatsApp | assumed same number (the current site uses a `wa.link/giabo8` short link that could not be resolved) | `data/hotel.ts → whatsapp` |
-| Email | info@hotel-shivkunj.com | `data/hotel.ts` |
-| Address | Shikhar Regency, A-09, Tapobhumi, Near Varay Grande Hotel, Indore–Ujjain Rd, Piplyaragho, Ujjain, MP 456006 | `data/hotel.ts` |
-| Owner story | Mr. Sandeep Singh Chouhan, retired mechanical engineer, 40+ years' experience | `data/hotel.ts → owner`, `app/about/page.tsx` |
-| Distances | Railway station 10 km/25 min · Bus stand 8 km/20 min · Indore Airport 48 km/55 min | `data/destinations.ts → nearby` |
-| Amenities | AC, Wi-Fi, 24×7 hot water, free parking, lift, smart TV, room service, housekeeping, large balconies, power backup, CCTV, 24×7 reception | `data/amenities.ts` |
-| "Pickup & travel assistance" | mentioned in "Local Travel Guidance" copy | `components/WhyShivkunj.tsx` |
-
-## 2. Missing — please supply
-
-- ~~Room categories, guests, beds, starting prices~~: confirmed 2026-10-03 (Deluxe Room: 2 adults, 1 king-size bed, from ₹2,800/night; Family Room: 3 + 1 guests, 1 king-size + 1 single bed, from ₹3,499/night).
-- ~~Child / extras policy~~: confirmed 2026-10-03 (Family Room: 3 adults + 1 child, child at no extra charge; extra bed and other services charged extra).
-- ~~Room sizes, check-in/out~~: confirmed 2026-10-03 (Deluxe 160 sq ft, Family 180 sq ft; check-in 11:00 AM, check-out 9:00 AM).
-- ~~Deluxe Room child policy~~: confirmed 2026-10-03 (2 adults + 1 child, child at no extra charge).
-- Extra-bed rate, if it should be published. → `data/rooms.ts`
-- Whether starting prices vary by date/season (the Rooms page says "may vary by date" — adjust if not).
-- ~~Distance from Shivkunj to temples~~: confirmed 2026-10-14 (Mahakaleshwar 9.8 km/22 min, Mahakal Lok 10 km/23 min, Ram Ghat 11.5 km/31 min, Kal Bhairav 22.1 km/40 min, Harsiddhi 12.1 km/27 min, Sandipani Ashram 18.8 km/36 min).
-- ~~Guest reviews~~: 4 genuine 5★ Google reviews added 2026-10-14, copied word-for-word from the hotel's Google profile (only trailing emoji removed; names shortened). Swap them any time in `data/testimonials.ts`.
-- ~~Policy text~~: written 2026-10-03 for Privacy, Terms and Cancellation (no-refund policy). Have them reviewed by the hotel's legal adviser. The cancellation policy includes a clause that the hotel returns payment if it cannot provide a confirmed room for reasons within its control; remove it if the owner does not agree.
-- Exact **Google Maps place URL** and **coordinates** (for directions + schema). → `data/hotel.ts`
-- **Social media URLs** (Facebook, Instagram, YouTube). → `data/hotel.ts → social`
-- An **enquiry delivery endpoint** (Formspree / Web3Forms / own API) if enquiries should arrive by email as well as WhatsApp. → env `NEXT_PUBLIC_ENQUIRY_ENDPOINT`
-
-## 3. Deliberately held back until confirmed
-
-- ~~Google rating~~: verified 2026-10-14 as 4.9 ★ from 143 reviews and shown in the reviews section. Update `hotel.rating` from time to time. No aggregateRating schema is emitted on purpose, because Google ignores ratings a business publishes about itself.
-- **10% advance / group booking offer** from the current site. Hidden (`hotel.offers.show = false`).
-- **"Wheelchair Accessible"** is listed on the current Rooms page. Left out until step-free access is confirmed.
-
-## 4. Blog facts to check before publishing
-
-Each starter article marks time-sensitive facts with `<Verify>`:
-Mahakaleshwar quick-darshan fee, Bhasma Aarti reporting time and dress code,
-Mahakal Lok timings/entry and Simhastha dates.
-
-## 5. Photos
-
-- All room, reception, entrance and lounge photos come from the current hotel site.
-- ~~Watermarked exterior photo~~: replaced 2026-10-14 with a clean exterior shot supplied by the hotel (`exterior-dusk`), now used on the homepage and in schema.
-- Two images on the current site were AI-generated (`ChatGPT-Image-…`). They are **not used**.
-- Temple photos come from the supplied `Temple images.zip`. Confirm usage rights.
-- Still wanted: bathroom, parking, balcony, and a clearly family-sized room.
+No reference-hotel reviews, ratings, owner biography, room prices, no-refund rules or driving distances are published as Aariva facts. Old blog articles remain drafts. The two room categories use photographs supplied under those room names.

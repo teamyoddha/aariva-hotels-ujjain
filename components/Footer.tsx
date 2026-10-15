@@ -11,7 +11,7 @@ export function Footer() {
         <div>
           <Logo variant="ivory" className="h-[64px] w-auto" />
           <p className="mt-5 max-w-[30ch] text-md text-cream/80">
-            A family-managed hotel on the Indore–Ujjain Road for pilgrims, families and travellers visiting Ujjain.
+            Comfortable rooms and celebration space near Birla Hospital Choraha in Nanakheda, Ujjain.
           </p>
           <p className="mt-5 text-sm italic text-gold">{hotel.tagline}</p>
         </div>
@@ -43,7 +43,7 @@ export function Footer() {
             <li>
               <a href={whatsappLink()} target="_blank" rel="noopener" className="flex min-h-[40px] items-center gap-3 text-cream/85 hover:text-gold">
                 <MessageCircle aria-hidden size={17} className="shrink-0 text-gold" />
-                WhatsApp Shivkunj
+                WhatsApp Aariva
               </a>
             </li>
             <li>
@@ -81,7 +81,7 @@ export function Footer() {
       </div>
       <div className="border-t border-cream/15">
         <div className="container-wide flex flex-col gap-2 py-6 text-sm text-cream/70 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {year} Shivkunj. All rights reserved.</p>
+          <p>© {year} Aariva. All rights reserved.</p>
           <p>
             Design &amp; deployment by{" "}
             <a

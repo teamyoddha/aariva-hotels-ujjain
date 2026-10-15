@@ -9,6 +9,7 @@ import { Pending } from "./Pending";
  * renders three marked placeholders — never invented quotes. Up to four are shown.
  */
 export function Testimonials() {
+  if (!testimonials.length) return null;
   const items = testimonials.slice(0, 4);
   const { rating } = hotel;
   return (

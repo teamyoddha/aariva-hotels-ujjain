@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Tokens from Shivkunj_website_design_guide.md §3–§7 and §39 */
+/* Tokens from Aariva_website_design_guide.md §3–§7 and §39 */
 :root {
-  --color-brand-primary: #6e1f2b;
-  --color-brand-primary-deep: #571822; /* pressed / active state of primary */
-  --color-brand-accent: #e89b3c;
+  --color-brand-primary: #551f17;
+  --color-brand-primary-deep: #3b1a12;
+  --color-brand-accent: #c9a227;
 
   --color-text-primary: #2a211c;
   --color-text-secondary: #e89b3c;
-  --color-text-tertiary: #6e1f2b;
+  --color-text-tertiary: #551f17;
   --color-text-inverse: #fbf6ee;
   /* Muted body copy, 6.9:1 on ivory */
   --color-text-muted: #5e534b;
@@ -21,7 +21,7 @@
   --color-surface-page: #fbf6ee;
   --color-surface-card: #ffffff;
   --color-surface-soft: #f5ede4;
-  --color-surface-primary: #6e1f2b;
+  --color-surface-primary: #551f17;
   --color-surface-accent-soft: rgba(232, 155, 60, 0.12);
   --color-border-subtle: rgba(42, 33, 28, 0.13);
 

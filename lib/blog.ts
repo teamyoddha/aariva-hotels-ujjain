@@ -74,7 +74,7 @@ function readAll(): BlogPostWithBody[] {
         featuredImageAlt: data.featuredImageAlt || "",
         publishedAt: toISO(data.publishedAt),
         updatedAt: data.updatedAt ? toISO(data.updatedAt) : undefined,
-        author: data.author || "Shivkunj",
+        author: data.author || "Aariva",
         seoTitle: data.seoTitle || undefined,
         seoDescription: data.seoDescription || undefined,
         draft: Boolean(data.draft),

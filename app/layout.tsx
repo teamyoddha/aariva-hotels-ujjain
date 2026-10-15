@@ -19,17 +19,17 @@ const lora = Lora({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Shivkunj Ujjain | Family-Friendly Hotel on Indore–Ujjain Road",
-    template: "%s | Shivkunj Ujjain",
+    default: "Aariva Hotels & Banquets | Comfortable Stays in Ujjain",
+    template: "%s | Aariva Ujjain",
   },
   description:
-    "Shivkunj is a family-managed hotel in Ujjain with air-conditioned rooms, free parking, lift access and 24×7 reception. Stay Blessed, Stay With Us.",
-  applicationName: "Shivkunj",
+    "Aariva Hotels & Banquets in Nanakheda, Ujjain. Family and Deluxe rooms, free Wi-Fi, air conditioning and celebration space.",
+  applicationName: "Aariva",
   formatDetection: { telephone: false },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#6E1F2B",
+  themeColor: "#551F17",
   width: "device-width",
   initialScale: 1,
 };

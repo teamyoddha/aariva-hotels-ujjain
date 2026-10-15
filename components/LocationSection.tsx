@@ -24,7 +24,7 @@ export function LocationSection() {
               <div key={n.name} className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 py-3.5">
                 <dt className="font-medium text-ink">{n.name}</dt>
                 <dd className="text-right text-sm text-ink-muted">
-                  {n.distance ?? <Pending>VERIFIED DISTANCE</Pending>}
+                  {n.distance ?? "View directions on the map"}
                 </dd>
               </div>
             ))}
@@ -34,7 +34,7 @@ export function LocationSection() {
               <Navigation aria-hidden size={18} /> Get Directions
             </a>
             <a href={telLink} className="btn-secondary">
-              <Phone aria-hidden size={18} /> Call Shivkunj
+              <Phone aria-hidden size={18} /> Call Aariva
             </a>
           </div>
         </div>

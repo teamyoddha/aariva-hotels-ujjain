@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Static export: `npm run build` writes a self-contained site to /out that can be
-  // uploaded to any static host (the current hotel-shivkunj.com hosting included).
+  // uploaded to any static host (the current aarivahotels.com hosting included).
   output: "export",
   outputFileTracingRoot: import.meta.dirname,
   trailingSlash: true,

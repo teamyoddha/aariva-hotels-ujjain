@@ -14,7 +14,7 @@ export function ExploreUjjain() {
             title="Discover Ujjain During Your Stay"
             intro="Ujjain is one of India's oldest temple cities. These are the places most of our guests plan their days around."
           />
-          <Link href="/blog/" className="link-arrow shrink-0">
+          <Link href="/explore-ujjain/" className="link-arrow shrink-0">
             Plan Your Ujjain Visit →
           </Link>
         </div>

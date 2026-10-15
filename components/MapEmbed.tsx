@@ -30,7 +30,7 @@ export function MapEmbed({ className = "" }: { className?: string }) {
       {load ? (
         <iframe
           src={hotel.mapEmbedUrl}
-          title="Map showing Shivkunj on the Indore–Ujjain Road, Ujjain"
+          title="Map showing Aariva on the Nanakheda, near Birla Hospital Choraha, Ujjain"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
           className="absolute inset-0 h-full w-full border-0"

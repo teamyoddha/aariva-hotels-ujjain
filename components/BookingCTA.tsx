@@ -24,7 +24,7 @@ export function BookingCTA({
   title,
   text,
   primary = { label: "Check Availability", href: "/contact/#enquiry" },
-  secondary = { label: "WhatsApp Shivkunj", href: "", whatsapp: true },
+  secondary = { label: "WhatsApp Aariva", href: "", whatsapp: true },
   whatsappMessage,
   className,
   variant = "band",

@@ -18,7 +18,7 @@ export function BlogIndex({ posts }: { posts: BlogPost[] }) {
       <div className="rounded-sm border border-dashed border-line bg-white px-6 py-14 text-center">
         <p className="text-xl font-medium text-maroon">No articles are available in this category yet.</p>
         <Link href="/blog/" className="link-arrow mt-4">
-          Explore all Shivkunj travel guides →
+          Explore all Aariva travel guides →
         </Link>
       </div>
     );

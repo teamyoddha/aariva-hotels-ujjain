@@ -10,11 +10,11 @@ import { hotel } from "@/data/hotel";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Rooms at Shivkunj Ujjain | Air-Conditioned Rooms for Families",
+  title: "Rooms at Aariva Ujjain | Air-Conditioned Rooms for Families",
   description:
-    "Explore Shivkunj room options in Ujjain: air-conditioned rooms with Wi-Fi, smart TV, 24×7 hot water, lift access and free parking. Enquire for availability and rates.",
+    "Explore Aariva Family and Deluxe rooms in Ujjain, with air conditioning, free Wi-Fi and private bathrooms. Enquire for current rates.",
   path: "/rooms/",
-  image: "/images/room-wide-warm.webp",
+  image: "/images/aariva-deluxe.webp",
 });
 
 export default function RoomsPage() {
@@ -26,7 +26,7 @@ export default function RoomsPage() {
         crumbs={[{ name: "Rooms", path: "/rooms/" }]}
         intro={
           <p>
-            Explore Shivkunj room options and choose the space that best suits your visit, whether you are a couple, a solo
+            Explore Aariva room options and choose the space that best suits your visit, whether you are a couple, a solo
             devotee or a family travelling together.
           </p>
         }
@@ -38,7 +38,7 @@ export default function RoomsPage() {
             <RoomCard key={room.slug} room={room} size="large" headingLevel="h2" />
           ))}
           <p className="text-sm text-ink-muted">
-            Prices are starting rates per night and may vary by date. {hotel.extrasPolicy}.
+            Contact our team for rates on your preferred dates. {hotel.extrasPolicy}.
           </p>
         </div>
       </section>
@@ -52,11 +52,10 @@ export default function RoomsPage() {
               The Comforts You Can Count On
             </h2>
             <p className="lead mt-6">
-              Arriving late at night or early in the morning? Share your train or flight details and expected arrival time, and
-              our front desk will have your room ready.
+              Share your travel dates, number of guests and expected arrival time. Our team will confirm room availability and check-in arrangements.
             </p>
             <p className="mt-6 flex items-center gap-3 text-md text-ink">
-              <Clock aria-hidden size={18} className="text-gold-text" /> 24×7 reception
+              <Clock aria-hidden size={18} className="text-gold-text" /> 24/7 guest support
             </p>
             <p className="mt-2 flex items-center gap-3 text-md text-ink">
               <MessageCircle aria-hidden size={18} className="text-gold-text" /> Booking help on phone and WhatsApp
@@ -76,7 +75,7 @@ export default function RoomsPage() {
       <BookingCTA
         title="Not Sure Which Room Suits You?"
         text="Tell us how many people are travelling and your dates. Our team will suggest the most comfortable option and share current rates."
-        whatsappMessage="Hello Shivkunj, could you help me choose a room? We are … guests, arriving on …"
+        whatsappMessage="Hello Aariva, could you help me choose a room? We are … guests, arriving on …"
       />
     </>
   );

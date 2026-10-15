@@ -1,5 +1,5 @@
 /**
- * Explore Ujjain. Driving distance/time from Shivkunj confirmed by the hotel
+ * Explore Ujjain. Driving distance/time from Aariva confirmed by the hotel
  * 2026-10-14. Leave `distance` empty for a new place and the card shows an [ADD …] marker.
  * `guide` links the card to the most relevant blog article (internal linking).
  * Destination photos were supplied with the project brief.
@@ -21,7 +21,6 @@ export const destinations: Destination[] = [
     description:
       "One of the twelve Jyotirlingas of Lord Shiva and the main reason many families visit Ujjain. The early-morning Bhasma Aarti is its best-known ritual.",
     image: "/images/mahakaleshwar.webp",
-    distance: "9.8 km · approx. 22 min drive",
     imageAlt: "Decorated shikhara of the Mahakaleshwar temple against a blue sky",
     guide: "/blog/mahakaleshwar-temple-darshan-guide/",
   },
@@ -31,7 +30,6 @@ export const destinations: Destination[] = [
     description:
       "A wide walkway beside the Mahakaleshwar temple lined with sculptures and murals telling stories of Lord Shiva. Pleasant to walk in the evening when it is lit up.",
     image: "/images/mahakal-lok.webp",
-    distance: "10 km · approx. 23 min drive",
     imageAlt: "Sculptures at Shri Mahakal Lok silhouetted against the evening sky",
     guide: "/blog/mahakal-lok-visitor-guide/",
   },
@@ -41,7 +39,6 @@ export const destinations: Destination[] = [
     description:
       "The oldest and best-known ghat on the Shipra river. Come at sunset for the evening aarti, when lamps are offered on the water.",
     image: "/images/ram-ghat.webp",
-    distance: "11.5 km · approx. 31 min drive",
     imageAlt: "Ram Ghat on the Shipra river with temples along the steps",
     guide: "/blog/best-places-to-visit-in-ujjain/",
   },
@@ -51,7 +48,6 @@ export const destinations: Destination[] = [
     description:
       "An ancient temple to Kal Bhairav, regarded as the guardian of Ujjain. Many visitors include it right after Mahakaleshwar darshan.",
     image: "/images/kal-bhairav.webp",
-    distance: "22.1 km · approx. 40 min drive",
     imageAlt: "Stone entrance gateway of the Kal Bhairav temple in Ujjain",
     guide: "/blog/best-places-to-visit-in-ujjain/",
   },
@@ -61,7 +57,6 @@ export const destinations: Destination[] = [
     description:
       "A revered Devi temple close to Mahakaleshwar, known for its tall lamp towers that are lit on special evenings.",
     image: "/images/harsiddhi.webp",
-    distance: "12.1 km · approx. 27 min drive",
     imageAlt: "Orange shikhara of the Harsiddhi Mata temple lit at dusk",
     guide: "/blog/best-places-to-visit-in-ujjain/",
   },
@@ -71,7 +66,6 @@ export const destinations: Destination[] = [
     description:
       "The ashram where, by tradition, Lord Krishna, Balarama and Sudama studied under Guru Sandipani. A quiet, green stop that children often enjoy.",
     image: "/images/sandipani-ashram.webp",
-    distance: "18.8 km · approx. 36 min drive",
     imageAlt: "Arched entrance gate of Maharshi Sandipani Ashram surrounded by trees",
     guide: "/blog/ujjain-travel-guide-for-families/",
   },
@@ -79,12 +73,9 @@ export const destinations: Destination[] = [
 
 /**
  * Location section. Railway station, bus stand and airport values are as published
- * on the current Shivkunj Rooms page — confirm before launch.
+ * on the current Aariva Rooms page — confirm before launch.
  */
 export const nearby: { name: string; distance?: string; note?: string }[] = [
-  { name: "Mahakaleshwar Temple", distance: "9.8 km · approx. 22 min" },
-  { name: "Shri Mahakal Lok", distance: "10 km · approx. 23 min" },
-  { name: "Ujjain Railway Station", distance: "10 km · approx. 25 min", note: "Auto, e-rickshaw and Rapido available" },
-  { name: "Ujjain Bus Stand", distance: "8 km · approx. 20 min", note: "Auto, e-rickshaw and Rapido available" },
-  { name: "Indore Airport", distance: "48 km · approx. 55 min", note: "Cabs available at the airport" },
+  { name: "Birla Hospital Choraha", distance: "Nearby landmark" },
+  { name: "Nanakheda", distance: "Our neighbourhood in Ujjain" },
 ];

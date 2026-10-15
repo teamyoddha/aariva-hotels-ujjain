@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 
-// Every value here maps to a token in Shivkunj_website_design_guide.md.
+// Every value here maps to a token in Aariva_website_design_guide.md.
 // Colours are the same hex values as the CSS variables in app/globals.css (hex here so
 // Tailwind opacity modifiers like bg-maroon/80 work).
 const config: Config = {
@@ -14,8 +14,8 @@ const config: Config = {
     },
     extend: {
       colors: {
-        maroon: { DEFAULT: "#6E1F2B", deep: "#571822" },
-        gold: { DEFAULT: "#E89B3C", text: "#9A5A12" },
+        maroon: { DEFAULT: "#551F17", deep: "#3B1A12" },
+        gold: { DEFAULT: "#C9A227", text: "#886916" },
         ink: { DEFAULT: "#2A211C", muted: "#5E534B" },
         ivory: "#FBF6EE",
         sand: "#F5EDE4",

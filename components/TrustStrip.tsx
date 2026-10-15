@@ -2,13 +2,13 @@ const points = [
   { big: "24×7", small: "Guest Assistance" },
   { big: "Family", small: "Friendly Stay" },
   { big: "Comfortable", small: "AC Rooms" },
-  { big: "Ujjain", small: "Indore–Ujjain Road" },
+  { big: "Nanakheda", small: "Ujjain" },
 ];
 
 /** Deliberately light: a single ruled row, not four cards (guide §12). */
 export function TrustStrip() {
   return (
-    <section aria-label="Why guests choose Shivkunj" className="container-wide">
+    <section aria-label="Why guests choose Aariva" className="container-wide">
       <ul className="grid grid-cols-2 border-y border-line md:grid-cols-4">
         {points.map((p, i) => (
           <li

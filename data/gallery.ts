@@ -1,23 +1,11 @@
-export type GalleryCategory = "Rooms" | "Hotel" | "Reception" | "Ujjain";
-
-export interface GalleryImage {
-  src: string;
-  alt: string;
-  category: GalleryCategory;
-  /**
-   * Tile size in the editorial grid: "tall" spans two rows, "feature" spans two
-   * columns and two rows, "single" is one cell. Keep 3 large + 4 single tiles for
-   * a gap-free grid.
-   */
-  tile: "tall" | "feature" | "single";
-}
-
-export const gallery: GalleryImage[] = [
-  { src: "/images/entrance-day.webp", alt: "The Shivkunj entrance with potted plants and a wooden ceiling", category: "Hotel", tile: "tall" },
-  { src: "/images/room-wide-warm.webp", alt: "Deluxe Room with double bed and warm lighting", category: "Rooms", tile: "feature" },
-  { src: "/images/entrance-night.webp", alt: "Hotel entrance with plants and a wooden ceiling, lit in the evening", category: "Hotel", tile: "tall" },
-  { src: "/images/room-wide-seating.webp", alt: "Room with double bed, built-in seating and table", category: "Rooms", tile: "single" },
-  { src: "/images/reception-collage.webp", alt: "Reception desk and decorative details at Shivkunj", category: "Reception", tile: "single" },
-  { src: "/images/lounge-seating.webp", alt: "Seating area with sofa and colourful cushions", category: "Hotel", tile: "single" },
-  { src: "/images/mahakal-night.webp", alt: "Mahakaleshwar temple lit up at night with fountains", category: "Ujjain", tile: "single" },
+export type GalleryCategory='Rooms'|'Hotel'|'Reception'|'Ujjain'|'Bathrooms';
+export interface GalleryImage {src:string;alt:string;category:GalleryCategory;tile:'tall'|'feature'|'single';}
+export const gallery:GalleryImage[]=[
+ {src:'/images/aariva-reception-1.webp',alt:'Aariva reception and welcome area',category:'Reception',tile:'tall'},
+ {src:'/images/aariva-deluxe.webp',alt:'Aariva Deluxe room',category:'Rooms',tile:'feature'},
+ {src:'/images/aariva-family.webp',alt:'Aariva Family room',category:'Rooms',tile:'tall'},
+ {src:'/images/aariva-deluxe-1.webp',alt:'Deluxe room interior',category:'Rooms',tile:'single'},
+ {src:'/images/aariva-reception-2.webp',alt:'Reception at Aariva',category:'Reception',tile:'single'},
+ {src:'/images/aariva-bathroom.webp',alt:'Bathroom at Aariva',category:'Bathrooms',tile:'single'},
+ {src:'/images/aariva-family-2.webp',alt:'Family room interior',category:'Rooms',tile:'single'}
 ];

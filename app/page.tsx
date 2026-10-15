@@ -4,7 +4,7 @@ import { BookingBar } from "@/components/BookingBar";
 import { TrustStrip } from "@/components/TrustStrip";
 import { AboutPreview } from "@/components/AboutPreview";
 import { RoomsPreview } from "@/components/RoomsPreview";
-import { WhyShivkunj } from "@/components/WhyShivkunj";
+import { WhyAariva } from "@/components/WhyAariva";
 import { AmenitiesGrid } from "@/components/AmenitiesGrid";
 import { BookingCTA } from "@/components/BookingCTA";
 import { ExploreUjjain } from "@/components/ExploreUjjain";
@@ -16,12 +16,12 @@ import { BlogPreview } from "@/components/BlogPreview";
 import { gallery } from "@/data/gallery";
 import { buildMetadata } from "@/lib/seo";
 
-const title = "Shivkunj Ujjain | Family-Friendly Hotel on Indore–Ujjain Road";
+const title = "Aariva Hotels & Banquets | Comfortable Stays in Ujjain";
 
 export const metadata: Metadata = buildMetadata({
   title,
   description:
-    "Stay at Shivkunj, a family-managed hotel in Ujjain with air-conditioned rooms, free parking, lift and 24×7 reception: a peaceful base for Mahakaleshwar darshan and exploring the city.",
+    "Stay at Aariva Hotels & Banquets in Nanakheda, Ujjain. Discover Family and Deluxe rooms, free Wi-Fi, air conditioning and celebration space.",
   path: "/",
 });
 
@@ -37,17 +37,18 @@ export default function HomePage() {
       </div>
       <AboutPreview />
       <RoomsPreview />
-      <WhyShivkunj />
+      <WhyAariva />
       <AmenitiesGrid />
+      <BookingCTA eyebrow="Stay & Celebrate" title="Make Room for Your Next Celebration." text="Banquet space at Aariva brings your stay and celebration together. Share your occasion, date and guest count with our team." primary={{label:'Explore Banquets',href:'/banquets/'}} secondary={{label:'Talk to Our Team',href:'/contact/'}} />
       <BookingCTA
         title="Planning Your Stay in Ujjain?"
-        text="Speak directly with the Shivkunj team for room availability, booking assistance and stay-related questions."
+        text="Speak directly with the Aariva team for room availability, booking assistance and stay-related questions."
         secondary={{ label: "WhatsApp Us", href: "", whatsapp: true }}
       />
       <ExploreUjjain />
       <section aria-labelledby="gallery-title" className="section bg-white">
         <div className="container-wide">
-          <SectionHeading id="gallery-title" eyebrow="Gallery" title="A Glimpse of Shivkunj" />
+          <SectionHeading id="gallery-title" eyebrow="Gallery" title="A Glimpse of Aariva" />
           <div className="mt-12">
             <Gallery images={gallery} />
           </div>
@@ -57,12 +58,12 @@ export default function HomePage() {
       <LocationSection />
       <BlogPreview />
       <BookingCTA
-        eyebrow="Stay Blessed, Stay With Us"
+        eyebrow="Comfortable Stays. Memorable Celebrations."
         title="Your Ujjain Stay Starts Here."
         text="Comfortable rooms, warm hospitality and a peaceful place to return to after exploring Ujjain."
         primary={{ label: "Book Your Stay", href: "/contact/#enquiry" }}
-        secondary={{ label: "Contact Shivkunj", href: "/contact/" }}
-        image="/images/entrance-night.webp"
+        secondary={{ label: "Contact Aariva", href: "/contact/" }}
+        image="/images/aariva-reception-2.webp"
       />
     </>
   );
