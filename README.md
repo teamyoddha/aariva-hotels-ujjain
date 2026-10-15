@@ -1,19 +1,21 @@
 # Aariva Hotels & Banquets
 
-React 19 / Next.js 15 / TypeScript / Tailwind. Adapted from the supplied hotel website using Aariva's logo and photographs.
+React / Next.js / TypeScript website for Aariva in Nanakheda, Ujjain.
 
-- `npm install` installs dependencies on a new machine.
-- `npm run dev` starts the preview at http://localhost:3200.
-- `npm run typecheck` checks TypeScript.
-- `npm run build` produces the static website in `out/`.
-- Upload the contents of `out/` to static hosting when ready to publish.
+## Hostinger deployment
 
-Pages: Home, About, Rooms, Deluxe Room, Family Room, Banquets, Gallery, Explore Ujjain, Contact and three information/policy pages.
+Connect this repository or upload Aariva-Hostinger-Nextjs.zip.
+Use Node.js 22 or 24, root `./`, install `npm ci`, build `npm run build`, and start `npm start`.
+Next.js builds to `.next` and serves on the platform's PORT (3000 by default).
+Do not upload the static Ready-to-Host ZIP on the Node.js application screen.
 
-Content lives in `data/`. Photographs are in `public/images/Aariva`; responsive WebP assets are in `public/images`. The active logo is `public/aariva-logo.png`.
+## Local development
 
-Enquiries open WhatsApp for +91 84588 84599 with guest details ready to send. They are not instant reservations and do not process payments. No email delivery endpoint is configured.
+`npm ci` installs dependencies. `npm run dev` starts the local website on port 3200.
+`npm run typecheck` checks types. `npm run images` regenerates the supplied hotel photographs and logo variants.
 
-Old reference-hotel blog articles are retained as unpublished drafts pending an editorial review. Ratings and reviews are hidden until verified Aariva reviews are supplied.
+Content is in `data/`; pages are in `app/`; shared components are in `components/`.
+The exterior showcase uses `public/images/Aariva/Front image of hotel.jpg`.
+WhatsApp enquiries go to +91 84588 84599. No payment or live-inventory integration is configured.
 
-See VERIFICATION.md for the remaining content confirmations. This project is not automatically deployed.
+See VERIFICATION.md for operational details still requiring hotel confirmation.

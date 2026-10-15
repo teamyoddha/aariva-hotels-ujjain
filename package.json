@@ -2,10 +2,11 @@
   "name": "aariva",
   "version": "1.0.0",
   "private": true,
+  "engines": { "node": ">=22" },
   "scripts": {
     "dev": "next dev -p 3200",
     "build": "next build",
-    "start": "npx serve out -l 3200",
+    "start": "next start --hostname 0.0.0.0",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "images": "node scripts/optimize-images.mjs"

@@ -1,6 +1,9 @@
 import sharp from 'sharp';
 import path from 'node:path';
 const root='public';
+const exteriorSource = path.join(root, 'images/Aariva/Front image of hotel.jpg');
+for (const width of [320,640,960,1280,1920]) await sharp(exteriorSource).rotate().resize({width,withoutEnlargement:true}).webp({quality:86}).toFile(path.join(root,'images',`aariva-exterior-${width}.webp`));
+await sharp(exteriorSource).rotate().resize({width:1280,withoutEnlargement:true}).webp({quality:86}).toFile(path.join(root,'images','aariva-exterior.webp'));
 const names={'Deluxe Room.jpg':'aariva-deluxe','Deluxe Room1.jpg':'aariva-deluxe-1','Deluxe Room2.jpg':'aariva-deluxe-2','Family Room.jpg':'aariva-family','Family Room (2).jpg':'aariva-family-2','reception1.jpg':'aariva-reception-1','reception2.jpg':'aariva-reception-2','bathrooms.jpg':'aariva-bathroom','bathrooms1.jpg':'aariva-bathroom-1'};
 for(const[file,name] of Object.entries(names)){
  const src=path.join(root,'images/Aariva',file);

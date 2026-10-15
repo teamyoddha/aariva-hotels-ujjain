@@ -78,7 +78,7 @@ export function hotelSchema() {
     slogan: hotel.tagline,
     url: SITE_URL,
     logo: absoluteUrl("/aariva-logo.png"),
-    image: [absoluteUrl("/images/aariva-reception-1-1280.webp"), absoluteUrl("/images/aariva-deluxe-1280.webp")],
+    image: [absoluteUrl("/images/aariva-exterior-1280.webp"), absoluteUrl("/images/aariva-deluxe-1280.webp")],
     telephone: hotel.phone,
     email: hotel.email,
     address: {

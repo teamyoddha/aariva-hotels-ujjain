@@ -7,10 +7,10 @@ export function AboutPreview() {
     <section aria-labelledby="about-preview-title" className="section">
       <div className="container-wide grid items-center gap-12 md:grid-cols-[1fr_1.05fr] md:gap-20">
         <div className="reveal relative">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-sand">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-md bg-sand shadow-[0_24px_60px_-24px_rgba(59,26,18,0.35)]">
             <Image
-              src="/images/aariva-reception-1.webp"
-              alt="Reception and welcome area at Aariva"
+              src="/images/aariva-exterior.webp"
+              alt="Front facade of Aariva Hotel and Banquet in Ujjain"
               fill
               sizes="(min-width: 900px) 46vw, 100vw"
               className="object-cover"

@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Static export: `npm run build` writes a self-contained site to /out that can be
-  // uploaded to any static host (the current aarivahotels.com hosting included).
-  output: "export",
+  // Hostinger Node.js deployment: build with Next.js and start with npm start.
   outputFileTracingRoot: import.meta.dirname,
   trailingSlash: true,
   images: {
